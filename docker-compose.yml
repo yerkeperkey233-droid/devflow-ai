@@ -41,7 +41,7 @@ services:
       - devflow_etcd_data:/etcd
 
   minio:
-    image: minio/minio:latest
+    image: milvusdb/minio:RELEASE.2024-12-18T13-15-44Z
     container_name: devflow-ai-minio
     restart: unless-stopped
     environment:

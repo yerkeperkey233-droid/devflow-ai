@@ -6,6 +6,7 @@ $backend = Join-Path $root 'backend'
 $frontend = Join-Path $root 'frontend'
 $python = Join-Path $backend '.venv\Scripts\python.exe'
 New-Item -ItemType Directory -Path $data -Force | Out-Null
+$env:HF_HOME = Join-Path $data 'huggingface'
 Push-Location $root
 try {
     & docker compose up -d postgres etcd minio milvus
