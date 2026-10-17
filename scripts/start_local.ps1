@@ -7,6 +7,7 @@ $frontend = Join-Path $root 'frontend'
 $python = Join-Path $backend '.venv\Scripts\python.exe'
 New-Item -ItemType Directory -Path $data -Force | Out-Null
 $env:HF_HOME = Join-Path $data 'huggingface'
+$env:PYTHONUTF8 = '1'
 $systemProxy = Get-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings' -ErrorAction SilentlyContinue
 if ($systemProxy.ProxyEnable -eq 1 -and $systemProxy.ProxyServer -match '^[^=;]+:\d+$') {
     $env:HTTPS_PROXY = "http://$($systemProxy.ProxyServer)"
