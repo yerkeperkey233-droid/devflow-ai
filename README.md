@@ -49,6 +49,16 @@ flowchart TD
 
 ## 快速开始
 
+### Windows 本地完整启动
+
+安装依赖并配置 `.env` 后，先启动 Docker Desktop，再双击项目根目录的 `start-local.cmd`，或运行 `powershell -ExecutionPolicy Bypass -File scripts/start_local.ps1`。
+
+此入口使用 PostgreSQL 和 Milvus，前端地址为 http://127.0.0.1:3000，后端文档为 http://127.0.0.1:8001/docs。后端使用 8001，避免与本机其他服务的 8000 端口冲突；本地模型缓存保存在 `.data/huggingface`。启动脚本使用 UTF-8，并继承 Windows 已配置的简单 HTTP 代理设置。
+
+`.env`、`frontend/.env.local`、数据库数据和本地模型缓存不上传到 GitHub。首次安装仍需按下列步骤准备 Python 虚拟环境、前端依赖和本地 Embedding 依赖。
+
+### 手动启动
+
 ```bash
 cp .env.example .env
 docker compose up -d postgres etcd minio milvus
