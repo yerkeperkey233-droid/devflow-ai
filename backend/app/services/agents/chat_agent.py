@@ -949,7 +949,7 @@ class ChatAgent(BaseAgent):
 
     def _tool_calling_system_prompt(self) -> str:
         return (
-            "你是 DevFlow AI 的对话控制器。这个稳定前缀会被缓存。"
+            "你是 RepoTrail AI 的对话控制器。这个稳定前缀会被缓存。"
             "请像长任务软件 Agent 一样工作：先规划，调用工具，读取 tool_result 观察结果，修正计划，"
             "持续推进直到用户请求真正完成，或步骤预算耗尽。"
             "当需要仓库、记忆、工作区代码或写操作安全上下文时，使用原生工具调用。"

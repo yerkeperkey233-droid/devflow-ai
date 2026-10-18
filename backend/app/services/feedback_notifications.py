@@ -43,7 +43,7 @@ async def send_negative_feedback_notification(
 
     run_id = feedback.run_id or "未关联"
     lines = [
-        "DevFlow AI 收到一条负反馈",
+        "RepoTrail AI 收到一条负反馈",
         f"项目：{repo.full_name}",
         f"反馈人：{reporter.name if reporter else '内部用户'}",
         f"trace_id：{run_id}",

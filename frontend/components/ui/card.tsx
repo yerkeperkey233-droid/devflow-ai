@@ -11,7 +11,7 @@ export function Card({ className, children }: { className?: string; children: Re
 export function PageTitle({ title, description }: { title: string; description: string }) {
   return (
     <div className="mb-6 flex flex-col gap-2 border-b border-line/80 pb-5">
-      <div className="text-xs font-medium uppercase tracking-[0.18em] text-accent">DevFlow AI</div>
+      <div className="text-xs font-medium uppercase tracking-[0.18em] text-accent">研迹 AI</div>
       <h1 className="text-2xl font-semibold tracking-normal text-ink md:text-3xl">{title}</h1>
       <p className="max-w-3xl text-sm leading-6 text-slate-600">{description}</p>
     </div>

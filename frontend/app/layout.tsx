@@ -3,8 +3,8 @@ import "./globals.css";
 import { AppShell } from "@/components/layout/app-shell";
 
 export const metadata: Metadata = {
-  title: "DevFlow AI",
-  description: "PR / Issue intelligent collaboration agent for engineering teams"
+  title: "研迹 AI · RepoTrail",
+  description: "面向 GitHub 仓库分析、项目知识检索与协作排查的 AI 工作台"
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -126,7 +126,7 @@ try {
         throw "前端在 60 秒内没有就绪，请检查 $frontendErrorLog。"
     }
 
-    Write-Host "DevFlow AI 本地演示已启动："
+    Write-Host "RepoTrail AI 本地演示已启动："
     Write-Host "  前端：http://127.0.0.1:$FrontendPort"
     Write-Host "  后端：http://127.0.0.1:$BackendPort"
     Write-Host "  后端 PID：$($backendProcess.Id)"

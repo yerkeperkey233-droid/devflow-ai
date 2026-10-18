@@ -19,7 +19,7 @@ router = APIRouter()
 
 PROJECT_DOC_TYPES = {"knowledge_file", "memory_note", "project_doc"}
 PUBLIC_REASONING_PROMPT = """
-你是 DevFlow AI 的 Issue Agent。请用中文流式输出一段“公开分析过程”，帮助用户理解你如何分析当前 Issue。
+你是 RepoTrail AI 的 Issue Agent。请用中文流式输出一段“公开分析过程”，帮助用户理解你如何分析当前 Issue。
 要求：
 - 只输出面向用户的可审计分析摘要，不输出隐藏链路思维或私有推理链。
 - 简洁说明你检查了哪些证据、如何判断结论/优先级/复杂度/负责人。
