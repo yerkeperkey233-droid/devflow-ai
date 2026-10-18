@@ -617,7 +617,7 @@ def compress_retrieval_results(
     return compressed
 
 
-COMPACT_SUMMARY_SYSTEM_PROMPT = """请在上下文压缩后，为 RepoTrail AI 创建一份可延续工作的摘要。
+COMPACT_SUMMARY_SYSTEM_PROMPT = """请在上下文压缩后，为 ForgeMind AI 创建一份可延续工作的摘要。
 目标不是单纯减少 token，而是为软件工程 Agent 保留工作连续性。
 
 请用纯文本返回以下部分：

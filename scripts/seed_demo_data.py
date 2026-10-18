@@ -15,7 +15,7 @@ def main() -> None:
                 owner="course-demo",
                 name="devflow-sample-api",
                 full_name="course-demo/devflow-sample-api",
-                description="Demo repository for RepoTrail AI course",
+                description="Demo repository for ForgeMind AI course",
                 default_branch="main",
                 github_id=10001,
             )

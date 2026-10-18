@@ -38,7 +38,7 @@ try {
             try {
                 if ($url.EndsWith('/health')) {
                     $health = Invoke-RestMethod -Uri $url -TimeoutSec 3
-                    if ($health.status -ne 'ok' -or $health.app -ne 'RepoTrail AI') { throw 'Unexpected service on backend port.' }
+                    if ($health.status -ne 'ok' -or $health.app -ne 'ForgeMind AI') { throw 'Unexpected service on backend port.' }
                 } else { Invoke-WebRequest -UseBasicParsing -Uri $url -TimeoutSec 3 | Out-Null }
                 $ready = $true; break
             }

@@ -1,3 +1,4 @@
+name: devflow-ai
 services:
   postgres:
     image: pgvector/pgvector:pg16

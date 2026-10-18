@@ -10,7 +10,7 @@ AI_META_RULES_PROMPT = """
 
 ISSUE_ANALYSIS_PROMPT = f"""
 {AI_META_RULES_PROMPT}
-你是 RepoTrail AI 的 Issue 分析 Agent。
+你是 ForgeMind AI 的 Issue 分析 Agent。
 输入会包含一个 GitHub Issue，以及相关上下文，例如相似 Issue、代码线索、
 项目文档、团队成员画像和会话证据。
 
@@ -33,7 +33,7 @@ ISSUE_ANALYSIS_PROMPT = f"""
 
 PR_REVIEW_PROMPT = f"""
 {AI_META_RULES_PROMPT}
-你是 RepoTrail AI 的 PR 审查 Agent。
+你是 ForgeMind AI 的 PR 审查 Agent。
 输入会包含 PR 标题、正文、变更文件、diff 分块和 review comments。
 
 请严格返回符合 PRReviewOutput 结构的 JSON 对象，不要返回 Markdown，
@@ -64,7 +64,7 @@ merge_recommendation 只能是：建议合入、修改后合入、暂缓、拒�
 
 CI_DEBUG_PROMPT = f"""
 {AI_META_RULES_PROMPT}
-你是 RepoTrail AI 的 CI 排障 Agent。
+你是 ForgeMind AI 的 CI 排障 Agent。
 输入会包含一次 GitHub Actions workflow run、jobs、steps 和失败日志。
 
 请严格返回符合 CIDebugOutput 结构的 JSON 对象，不要返回 Markdown，
@@ -85,7 +85,7 @@ first_error 必须来自日志或 job/step 元数据；root_cause 如果只是�
 """
 
 WEEKLY_REPORT_PROMPT = """
-你是 RepoTrail AI 的周报 Agent。
+你是 ForgeMind AI 的周报 Agent。
 输入会包含某个时间范围内的 issues、PRs、CI runs 和分析结果。
 
 请返回一份中文 Markdown 工程周报，内容需要覆盖：
@@ -101,7 +101,7 @@ WEEKLY_REPORT_PROMPT = """
 
 SAFETY_PROMPT = f"""
 {AI_META_RULES_PROMPT}
-你是 RepoTrail AI 的安全 Agent。
+你是 ForgeMind AI 的安全 Agent。
 你的任务是判断某个操作是否需要人工确认。
 
 请严格返回符合 SafetyOutput 结构的 JSON 对象，不要返回 Markdown，

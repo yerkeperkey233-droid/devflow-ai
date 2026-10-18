@@ -2465,11 +2465,11 @@ export default function DashboardPage() {
       <aside className="flex min-h-0 min-w-0 flex-col overflow-hidden border-r border-line bg-[#fbf7f2] transition-all duration-300">
         <div className={`border-b border-line ${isSidebarCollapsed ? "p-2" : "p-4"}`}>
           <div className={`flex items-center ${isSidebarCollapsed ? "flex-col gap-3" : "gap-3"}`}>
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-accent text-sm font-bold text-white">RT</div>
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-accent text-sm font-bold text-white">FM</div>
             {!isSidebarCollapsed && (
               <div className="min-w-0 flex-1">
-                <div className="text-sm font-semibold text-ink">研迹 AI</div>
-                <div className="truncate text-xs text-slate-500">仓库分析 · 知识检索 · 协作排查</div>
+                <div className="text-sm font-semibold text-ink">ForgeMind AI</div>
+                <div className="truncate text-xs text-slate-500">研发协作 Agent 平台</div>
               </div>
             )}
             <button
@@ -4748,7 +4748,7 @@ function MemoryIndexPromptCard({
       ? `项目 ${repo.full_name} 上次扫描没有完成：${state.error_message || error || "未知错误"}`
       : isStale
         ? `项目 ${repo.full_name} 的本地内容已变化，建议更新索引，让回答保持新鲜。`
-        : "建立索引后，研迹 AI 可以检索项目说明、架构文档、ADR、计划和经验记录，不必每次从零开始。";
+        : "建立索引后，ForgeMind AI 可以检索项目说明、架构文档、ADR、计划和经验记录，不必每次从零开始。";
   const actionLabel = scanning ? "扫描中..." : isFailed ? "重试扫描" : isStale ? "更新索引" : "开始扫描";
 
   return (

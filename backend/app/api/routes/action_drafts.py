@@ -42,7 +42,7 @@ async def _execute_github_draft(db: Session, draft: ActionDraft, repo: Repositor
             raise RuntimeError("评论草稿缺少 issue/pr number")
         return await client.create_issue_comment(repo.owner, repo.name, issue_number, draft.content)
     if draft_type == "create_issue":
-        title = draft.title or (draft.content.splitlines()[0][:120] if draft.content else "RepoTrail AI Issue")
+        title = draft.title or (draft.content.splitlines()[0][:120] if draft.content else "ForgeMind AI Issue")
         return await client.create_issue(repo.owner, repo.name, title, draft.content)
     if draft_type == "close_issue":
         if issue_number is None:
@@ -58,7 +58,7 @@ async def _execute_github_draft(db: Session, draft: ActionDraft, repo: Repositor
             raise RuntimeError("Label 草稿缺少 labels")
         return await client.add_issue_labels(repo.owner, repo.name, issue_number, [str(item) for item in labels])
     if draft_type == "send_report":
-        return {"status": "recorded", "message": "报告草稿已在 RepoTrail AI 中标记为已发送，未接入外部消息渠道。"}
+        return {"status": "recorded", "message": "报告草稿已在 ForgeMind AI 中标记为已发送，未接入外部消息渠道。"}
     raise RuntimeError(f"暂不支持执行草稿类型：{draft.draft_type}")
 
 
